@@ -1,0 +1,396 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+    background: url(https://source.unsplash.com/1600x900/?landscape);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.container {
+    width: 80%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 23px -4px #00000070;
+}
+
+h1{
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    color: #BE4CFF;
+}
+
+.points-players {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.player01 {
+    color: rgb(77, 128, 216);
+}
+
+.player02{
+    color: #E0470F;
+}
+
+.point-play1, .point-play2 {
+    border-radius: 7px;
+    font-size: 35px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+section.players {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+    text-align: center;
+}
+
+
+
+.container-player1, .container-player2, .container-resultado {
+    width: 45%;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-player1 {
+    border: 1px solid rgb(77, 128, 216);
+}
+.container-player1 p{
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: rgb(77, 128, 216);
+    color: #ffffff;
+}
+.container-player2 {
+    border: 1px solid #E0470F;
+    display: none;
+}
+.container-player2 p{
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color:  #E0470F;
+    color: #ffffff;
+}
+.container-resultado {
+    display: none;
+    border: 1px solid #69C457;
+
+}
+
+.load {
+    display: flex;
+    padding: 10px;
+    margin: 15px;
+    animation: is-rotating 1s infinite linear;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    border-right-color: #2aab1000;
+}
+@keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+.btn-jogador {
+    height: 100%;
+    margin: 15px 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;   
+}
+
+.p1rock-result, .p1paper-result, .p1scissor-result, .p2rock-result, .p2paper-result, .p2scissor-result {
+    display: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+
+}
+.players button:hover {
+    transform: scale(1.2);
+}
+
+.p1rock, .p2rock {
+    background-color: #a200ff;
+}
+.p1paper, .p2paper{
+    background-color: #9ee01a;
+}
+.p1scissor, .p2scissor {
+    background-color: #7dbeed;
+}
+
+.result {
+    height: 40px;
+    width: 300px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    padding: 25px 0;
+    max-width: 500px;
+}
+
+.action button{
+    font-size: 18px;
+    width: 200px;
+    height: 45px;
+    letter-spacing: 1.2px;
+}
+
+.limpar-novamente {
+    width: 100%;
+    height: 45px;
+    background-color: #BE4CFF;
+    color: #ffffff;
+}
+
+
+
+.action #reset {
+    background-color: #3e82b3;
+    color: #ffffff;
+}
+
+.vsResult {
+    padding: 0 10px;
+}
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .container {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+    .btn-jogador button {
+        font-size: 35px;   
+   }
+   .container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    }
+    .result {
+        width: 80%;
+    }
+    .btn-jogador {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+    .btn-jogador button {
+        font-size: 40px;
+    }
+    .btn-result {
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .container-player1, .container-player2, .container-resultado {
+        width: 90%;
+    }
+    .btn-jogador {
+        width: 100%;
+    }
+
+    .btn-jogador button {
+        font-size: 53px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 570px) {
+
+    body{
+        padding: 25px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    
+    .container-player1, .container-player2, .container-resultado {
+        width: 100%;
+        margin: 0;
+        padding: 20px 10px;
+        justify-content: center;
+    }
+
+    .container-resultado {
+        padding: 25px 0;
+    }
+    section.players{
+        margin: 15px 0 0;
+    }
+    .point-play1, .point-play2 {
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .container {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    button.limpar-novamente {
+        width: 100%;
+    }
+    button#reset {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .btn-jogador {
+        gap: 10px;
+    }
+    
+    .btn-jogador button {
+        font-size: 41px;
+   }
+   .btn-result {
+    font-size: 50px;
+}
+   .limpar-novamente{
+    width: 100%;
+   }
+   .action {
+    flex-wrap: wrap;
+   }
+   .action button {
+    width: 100%;
+   }
+   .container-player1 p {
+    width: 100%;
+    padding: 10px;
+   }
+   .container-player2 p{
+    width: 100%;
+    padding: 10px;
+   }
+
+}
+
+@media screen and (max-width: 352px) {
+    p.result {
+        padding: 10px 0;
+    }
+    p.point-play1, p.point-play2 {
+        font-size: 20px;
+    }
+    .container-player1 p {
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
+    .container-player2 p {
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* button#jogar {
+        width: 100%;
+        padding: 0;
+    } */
+    section.players {
+        margin: 15px;
+    }
+    .point-play1, .point-play2 {
+        font-size: 20px;
+    }
+    .limpar-novamente {
+        margin-top: 15px;
+        padding: 0;
+    }
+    .btn-jogador button {
+        font-size: 35px;
+    }
+    .btn-result {
+        font-size: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 325px) {
+    .btn-jogador button {
+        font-size: 42px;
+    }
+    .btn-result {
+        font-size: 50px;
+    }
+}
